@@ -1,5 +1,5 @@
-
 import 'package:flutter/material.dart';
+import 'dart:ui';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -46,14 +46,19 @@ class LoginPage extends StatelessWidget {
           TextFormField(
             autofocus: true,
             keyboardType: TextInputType.text,
+            //copiei do outro código de usuário
             decoration: InputDecoration(
+              labelText: "Username",
+              labelStyle:TextStyle(
+                color:Colors.black38,
+                fontWeight: FontWeight.w400,
+              ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(50),
                 borderSide: BorderSide(color: Colors.black26),
               ),
               enabledBorder: OutlineInputBorder(borderSide: BorderSide.none),
               filled: false,
-              hintText: "Username",
             ),
           ),
           SizedBox(
@@ -63,9 +68,13 @@ class LoginPage extends StatelessWidget {
             autofocus: true,
             keyboardType: TextInputType.text,
             decoration: InputDecoration(
+              //Faz a transição do texto para a borda.
+              labelText: 'Password',
+              labelStyle: TextStyle(
+                color: Colors.black38,
+                fontWeight: FontWeight.w400,
+              ),
               enabledBorder: OutlineInputBorder(borderSide: BorderSide.none),
-              filled: false,
-              hintText: "Password",
               suffixIcon: Icon(
                 Icons.remove_red_eye_outlined,
                 color: Colors.black38,
