@@ -13,6 +13,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Run App',
       theme: ThemeData(
+        //Definindo fonte padrão
+        fontFamily: 'RedHatText',
         primaryColor: Colors.white,
       ),
       home: LoginPage(),
