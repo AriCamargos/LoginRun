@@ -7,15 +7,16 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         shadowColor: Colors.white,
-        centerTitle: true,
+        elevation: 0, //Sombra no fim da AppBar nulo.
+        centerTitle: true, //Texto centralizado
         title: Text(
           'Sign In',
-          style: TextStyle(fontSize: 15, fontWeight: FontWeight.w900),
+          style: TextStyle(fontSize: 15,
+          fontWeight: FontWeight.w900), //Espessura da fonte.
         ),
         actions: [
           Icon(
-            Icons.settings_outlined,
-          ),
+            Icons.settings_outlined),
           Padding(
             padding: EdgeInsets.only(
               right: 20,
@@ -24,70 +25,91 @@ class LoginPage extends StatelessWidget {
         ],
       ),
       body: Container(
-        //Borda da logo
-        padding: EdgeInsets.only(
-          top: 60,
+        
+        padding: EdgeInsets.only( //Borda da logo.
+          top: 40,
           left: 40,
           right: 40,
           bottom: 60,
         ),
+
         color: Colors.white,
-        //Inserindo as listas
-        child: ListView(children: [
-          //Definindo a imagem da logo
-          SizedBox(
+        
+        child: ListView( //Inserindo as listas
+          children: [ 
+          SizedBox( //Definindo o tamanho da imagem da logo.
             width: 128,
             height: 128,
-            child: Image.asset("assets/images/logo.png"),
+            child: Image.asset("assets/images/logo_maior.png"),
           ),
+
           SizedBox(
-            height: 25,
+            height: 80,
           ),
+
           TextFormField(
-            autofocus: true,
+            autofocus: false,
+            cursorColor: Colors.black,
             keyboardType: TextInputType.text,
-            //copiei do outro código de usuário
-            decoration: InputDecoration(
+            decoration: new InputDecoration(
               labelText: "Username",
-              labelStyle:TextStyle(
-                color:Colors.black38,
-                fontWeight: FontWeight.w400,
+              labelStyle: TextStyle(
+                decoration: TextDecoration.none, //Texto dentro da label sublinhado nulo.
+                color: Colors.black26,
+                fontWeight: FontWeight.bold //Espessura da fonte negrito.
+              ),//2º label
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(50),
+                borderSide: BorderSide(
+                  color: Colors.black,
+                ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(50),
-                borderSide: BorderSide(color: Colors.black26),
+                borderSide: BorderSide(
+                  color: Colors.black,
+                  width: 2,
+                ),
               ),
-              enabledBorder: OutlineInputBorder(borderSide: BorderSide.none),
-              filled: false,
             ),
           ),
+
           SizedBox(
             height: 25,
           ),
+
           TextFormField(
-            autofocus: true,
-            keyboardType: TextInputType.text,
-            decoration: InputDecoration(
-              //Faz a transição do texto para a borda.
-              labelText: 'Password',
-              labelStyle: TextStyle(
-                color: Colors.black38,
-                fontWeight: FontWeight.w400,
+            cursorColor: Colors.black, //Mudando cor do cursor
+            autofocus: false, //Auto-focus: falso.
+            keyboardType: TextInputType.text, //Label de texto.
+            obscureText: true, //Senha oculta.
+            decoration: InputDecoration(  
+              labelText: 'Password', //O label faz a transição do texto para a borda.
+              labelStyle: TextStyle( //Configurando estilo do texto.
+                color: Colors.black26,
+                fontWeight: FontWeight.bold, //Letra em negrito.
               ),
-              enabledBorder: OutlineInputBorder(borderSide: BorderSide.none),
-              suffixIcon: Icon(
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(50), //Arredondando borda do TextInput.
+              ),
+              focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(50), //Arredondando borda do TextInput quando houver ação.
+                borderSide: BorderSide(
+                  color: Colors.black,
+                  width: 2, //Espessura da borda quando houver a ação.
+                ),
+              ),
+              suffixIcon: Icon( //Icon no fim do label.
                 Icons.remove_red_eye_outlined,
                 color: Colors.black38,
               ),
-              focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(50),
-                borderSide: BorderSide(color: Colors.black26),
-              ),
             ),
           ),
+
           SizedBox(
-            height: 25,
+            height: 40,
           ),
+
           //Para aumentar a altura do botão, colocar dentro de SizedeBox
           SizedBox(
             height: 70,
@@ -96,7 +118,7 @@ class LoginPage extends StatelessWidget {
               child: Text(
                 'Login'.toUpperCase(),
                 style: TextStyle(
-                  letterSpacing: 2.5,
+                    letterSpacing: 2.5, //Espaçamento entre as letras.
                     fontSize: 11,
                     color: Colors.white,
                     fontWeight: FontWeight.w900,
@@ -110,9 +132,11 @@ class LoginPage extends StatelessWidget {
               ),
             ),
           ),
+
           SizedBox(
             height: 10,
           ),
+
           TextButton(
             onPressed: () {},
             child: Text(
@@ -124,17 +148,19 @@ class LoginPage extends StatelessWidget {
               ),
             ),
           ),
+
           SizedBox(
-            height: 98,
+            height: 65,
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+
+          Row( //Linhas dos botões de baixo.
+            mainAxisAlignment: MainAxisAlignment.center, //Alinhamento centralizado.
             children: [
               SizedBox(
                 height: 60,
-                child: OutlinedButton(
+                child: OutlinedButton( //Botão escrito.
                   onPressed: () {},
-                  child: Text(
+                  child: Text( //Estilizando apenas o texto do botão.
                     'Create an Account'.toUpperCase(),
                     style: TextStyle(
                       letterSpacing: 2.5,
@@ -143,20 +169,16 @@ class LoginPage extends StatelessWidget {
                       color: Colors.black38,
                     ),
                   ),
-                  style: OutlinedButton.styleFrom(
+                  style: OutlinedButton.styleFrom( //Estilizando o botão em sí.
                     backgroundColor: Colors.white,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(50),
                     ),
-                    padding: EdgeInsets.fromLTRB(43, 20, 43, 20),
+                    padding: EdgeInsets.fromLTRB(43, 20, 43, 20), //Bordas dento do botão.
                   ),
                 ),
               ),
-              SizedBox(
-                height: 10,
-                width: 7,
-              ),
-              OutlinedButton(
+              OutlinedButton( //Botão com a logo GOOGLE.
                 onPressed: () {},
                 child: Image.asset(
                   'assets/images/google-logo1.png',
