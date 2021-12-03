@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:loginrun_flutter/components/account_page.dart';
 
 class ButtonPage extends StatefulWidget {
   @override
@@ -16,7 +17,12 @@ class ButtonPageState extends State<ButtonPage> {
           height: 60,
           child: OutlinedButton(
             //Botão escrito.
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => AccountPage()),
+              );
+            },
             child: Text(
               //Estilizando apenas o texto do botão.
               'Create an Account'.toUpperCase(),

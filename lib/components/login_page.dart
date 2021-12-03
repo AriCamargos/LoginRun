@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:loginrun_flutter/components/button_login.dart';
 import 'package:loginrun_flutter/components/button_password.dart';
+import 'package:loginrun_flutter/components/space_page.dart';
 import 'dart:ui';
 import 'button_textfild.dart';
 import 'package:loginrun_flutter/components/button_page.dart';
@@ -45,27 +46,19 @@ class LoginPage extends StatelessWidget {
               child: Image.asset("assets/images/logo_maior.png"),
             ),
 
-            SizedBox( 
-              height: 80,
-            ), //Altura da imagem até o o botão username.
+            SpacePage80(),
 
             ButtonTextFild(), //Função botão Username em TextFildForm.
 
-            SizedBox( 
-              height: 25,
-            ), //Altura do button username até o o button password.
+            SpacePage25(),
 
             ButtonPassword(), //Função button passaword.
 
-            SizedBox( 
-              height: 40,
-            ),//Altura do button username até o o button password.
+            SpacePage40(),
 
             ButtonLogin(), //Função botão do login.
 
-            SizedBox(
-              height: 10,
-            ),//Altura do button login até o o button link.
+            SpacePage10(),
 
             TextButton(
               onPressed: () {},
@@ -79,9 +72,7 @@ class LoginPage extends StatelessWidget {
               ),
             ),
 
-            SizedBox(
-              height: 65,
-            ), //Altura do button login até o o button link.
+            SpacePage65(), //Altura do button login até o o button link.
             
             ButtonPage(), //Método botão bottom.
           ],

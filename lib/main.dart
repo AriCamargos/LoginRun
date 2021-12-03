@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:loginrun_flutter/components/login_page.dart';
+import 'components/account_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'RedHatText',
         primaryColor: Colors.white,
       ),
-      home: LoginPage(),
+      home: AccountPage(),
     );
   }
 }

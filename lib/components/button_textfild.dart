@@ -15,8 +15,7 @@ class _ButtonTextFildState extends State<ButtonTextFild> {
       decoration: new InputDecoration(
         labelText: "Username",
         labelStyle: TextStyle(
-            decoration:
-                TextDecoration.none, //Texto dentro da label sublinhado nulo.
+            decoration: TextDecoration.none, //Texto dentro da label sublinhado nulo.
             color: Colors.black26,
             fontWeight: FontWeight.bold //Espessura da fonte negrito.
             ), //2º label
