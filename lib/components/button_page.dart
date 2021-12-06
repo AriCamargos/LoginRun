@@ -20,7 +20,7 @@ class ButtonPageState extends State<ButtonPage> {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => AccountPage()),
+                MaterialPageRoute(builder: (context) => AccountPage(),),
               );
             },
             child: Text(
