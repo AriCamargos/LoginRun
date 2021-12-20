@@ -14,7 +14,7 @@ class _ButtonPasswordState extends State<ButtonPassword> {
       keyboardType: TextInputType.text, //Label de texto.
       obscureText: true, //Senha oculta.
       decoration: InputDecoration(
-        labelText: 'Password', //O label faz a transição do texto para a borda.
+        labelText: 'Senha', //O label faz a transição do texto para a borda.
         labelStyle: TextStyle(
           //Configurando estilo do texto.
           color: Colors.black26,

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:loginrun_flutter/components/button_login.dart';
 import 'package:loginrun_flutter/components/button_password.dart';
+import 'package:loginrun_flutter/components/link_page.dart';
 import 'package:loginrun_flutter/components/space_page.dart';
-import 'dart:ui';
 import 'button_textfild.dart';
 import 'package:loginrun_flutter/components/button_page.dart';
 
@@ -11,16 +11,22 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.white,
         shadowColor: Colors.white,
         elevation: 0, //Sombra no fim da AppBar nulo.
-        centerTitle: true, //Texto centralizado
+        centerTitle: true,
         title: Text(
-          'Sign In',
+          'Entrar',
           style: TextStyle(
-              fontSize: 15, fontWeight: FontWeight.w900), //Espessura da fonte.
+              fontSize: 15,
+              fontWeight: FontWeight.w900,
+              color: Colors.black), //Espessura da fonte.
         ),
         actions: [
-          Icon(Icons.settings_outlined),
+          Icon(
+            Icons.settings_outlined,
+            color: Colors.black,
+          ),
           Padding(
             padding: EdgeInsets.only(
               right: 20,
@@ -32,9 +38,9 @@ class LoginPage extends StatelessWidget {
         padding: EdgeInsets.only(
           //Borda da logo.
           top: 40,
-          left: 40,
-          right: 40,
-          bottom: 60,
+          left: 30,
+          right: 30,
+          bottom: 40,
         ),
         color: Colors.white,
         child: ListView(
@@ -60,20 +66,10 @@ class LoginPage extends StatelessWidget {
 
             SpacePage10(),
 
-            TextButton(
-              onPressed: () {},
-              child: Text(
-                'Forgot password?',
-                style: TextStyle(
-                  decoration: TextDecoration.underline,
-                  fontSize: 15,
-                  color: Colors.black38,
-                ),
-              ),
-            ),
+            LinkPagePassword(),
 
             SpacePage65(), //Altura do button login até o o button link.
-            
+
             ButtonPage(), //Método botão bottom.
           ],
         ),

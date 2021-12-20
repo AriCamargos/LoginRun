@@ -13,12 +13,13 @@ class _ButtonTextFildState extends State<ButtonTextFild> {
       cursorColor: Colors.black,
       keyboardType: TextInputType.text,
       decoration: new InputDecoration(
-        labelText: "Username",
+        labelText: "Usuário",
         labelStyle: TextStyle(
-            decoration: TextDecoration.none, //Texto dentro da label sublinhado nulo.
-            color: Colors.black26,
-            fontWeight: FontWeight.bold //Espessura da fonte negrito.
-            ), //2º label
+          decoration:
+              TextDecoration.none, //Texto dentro da label sublinhado nulo.
+          color: Colors.black26,
+          fontWeight: FontWeight.bold,
+        ), //2º label
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(50),
           borderSide: BorderSide(
@@ -33,10 +34,6 @@ class _ButtonTextFildState extends State<ButtonTextFild> {
           ),
         ),
       ),
-      
-      
     );
-
-    
   }
 }

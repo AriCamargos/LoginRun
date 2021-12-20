@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:loginrun_flutter/components/account_page.dart';
+import 'package:loginrun_flutter/components/space_page.dart';
 
 class ButtonPage extends StatefulWidget {
   @override
@@ -20,17 +21,21 @@ class ButtonPageState extends State<ButtonPage> {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => AccountPage(),),
+                MaterialPageRoute(
+                  builder: (context) => AccountPage(),
+                ),
               );
             },
-            child: Text(
-              //Estilizando apenas o texto do botão.
-              'Create an Account'.toUpperCase(),
-              style: TextStyle(
-                letterSpacing: 2.5,
-                fontWeight: FontWeight.w900,
-                fontSize: 12,
-                color: Colors.black38,
+            child: Expanded(
+              child: Text(
+                //Estilizando apenas o texto do botão.
+                'Criar uma conta'.toUpperCase(),
+                style: TextStyle(
+                  letterSpacing: 2.5,
+                  fontWeight: FontWeight.w900,
+                  fontSize: 12,
+                  color: Colors.black38,
+                ),
               ),
             ),
             style: OutlinedButton.styleFrom(
@@ -44,6 +49,7 @@ class ButtonPageState extends State<ButtonPage> {
             ),
           ),
         ),
+        SpacePageWidth5(),
         OutlinedButton(
           //Botão com a logo GOOGLE.
           onPressed: () {},
