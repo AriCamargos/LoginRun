@@ -2,12 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:loginrun_flutter/components/account_page.dart';
 import 'package:loginrun_flutter/components/space_page.dart';
 
-class ButtonPage extends StatefulWidget {
-  @override
-  ButtonPageState createState() => ButtonPageState();
-}
+class ButtonPage extends StatelessWidget {
+  const ButtonPage({Key? key}) : super(key: key);
 
-class ButtonPageState extends State<ButtonPage> {
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -19,11 +16,8 @@ class ButtonPageState extends State<ButtonPage> {
           child: OutlinedButton(
             //Botão escrito.
             onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => AccountPage(),
-                ),
+              Navigator.of(context).push(
+                _createdRoute(),
               );
             },
             child: Expanded(
@@ -66,4 +60,26 @@ class ButtonPageState extends State<ButtonPage> {
       ],
     );
   }
+}
+
+//Animando uma rota de página de baixo para cima
+Route _createdRoute() {
+  return PageRouteBuilder(
+      //Classe que define rotas de página
+      pageBuilder: (context, animation, secondaryAnimation) =>
+          AccountPage(), //Retorno pageBuilder = cria o cinteúdo primário da rota.
+      transitionsBuilder: (context, animation, secondaryAnimation, child) {
+        //Retorno transitionsBuilder = adiciona transição.
+        const begin = Offset(0.0, 1.0);
+        const end = Offset.zero;
+        const curve = Curves.ease;
+
+        var tween =
+            Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+
+        return SlideTransition(
+          position: animation.drive(tween),
+          child: child,
+        );
+      });
 }

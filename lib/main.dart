@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:loginrun_flutter/components/account_page.dart';
 import 'package:loginrun_flutter/components/login_page.dart';
 
 void main() {
