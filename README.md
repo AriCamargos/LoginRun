@@ -1,5 +1,5 @@
 # App Login Runner
-
+Aplicativo desenvolvido com conceitos de layout, navegação e animação de uma rota de página. 
 
 
 <p align="center">
