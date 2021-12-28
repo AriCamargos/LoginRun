@@ -84,6 +84,13 @@ class AccountPage extends StatelessWidget {
             SpacePage15(),
             Container(
               child: TextFormField(
+                //Validador
+                validator: (String? _email) {
+                  if (_email?.length != 5) {
+                    return "E-mail parece curto demais!";
+                  }
+                  return null;
+                },
                 autofocus: false,
                 cursorColor: Colors.black,
                 keyboardType: TextInputType.emailAddress,
@@ -108,6 +115,12 @@ class AccountPage extends StatelessWidget {
             SpacePage15(),
             Container(
               child: TextFormField(
+                validator: (value) {
+                  // ignore: unrelated_type_equality_checks
+                  if (value?.length != 5) {
+                    return "A senha deve pelo menos 6 caracteres";
+                  }
+                },
                 cursorColor: Colors.black, //Mudando cor do cursor
                 autofocus: false, //Auto-focus: falso.
                 keyboardType: TextInputType.text, //Label de texto.

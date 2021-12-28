@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class ButtonLogin extends StatefulWidget {
+/* class ButtonLogin extends StatefulWidget {
   @override
   _ButtonLoginState createState() => _ButtonLoginState();
 }
@@ -30,7 +30,7 @@ class _ButtonLoginState extends State<ButtonLogin> {
       ),
     );
   }
-}
+} */
 
 class ButtonNextStep extends StatelessWidget {
   const ButtonNextStep({Key? key}) : super(key: key);

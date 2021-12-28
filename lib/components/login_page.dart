@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:loginrun_flutter/components/button_login.dart';
-import 'package:loginrun_flutter/components/button_password.dart';
 import 'package:loginrun_flutter/components/link_page.dart';
 import 'package:loginrun_flutter/components/space_page.dart';
 import 'button_textfild.dart';
@@ -56,13 +54,7 @@ class LoginPage extends StatelessWidget {
 
             ButtonTextFild(), //Função botão Username em TextFildForm.
 
-            SpacePage25(),
-
-            ButtonPassword(), //Função button passaword.
-
-            SpacePage40(),
-
-            ButtonLogin(), //Função botão do login.
+            /* ButtonLogin(), */ //Função botão do login.
 
             SpacePage10(),
 
