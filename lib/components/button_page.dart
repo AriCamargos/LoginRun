@@ -20,15 +20,17 @@ class ButtonPage extends StatelessWidget {
                 _createdRoute(),
               );
             },
-            child: Expanded(
-              child: Text(
-                //Estilizando apenas o texto do botão.
-                'Criar uma conta'.toUpperCase(),
-                style: TextStyle(
-                  letterSpacing: 2.5,
-                  fontWeight: FontWeight.w900,
-                  fontSize: 12,
-                  color: Colors.black38,
+            child: Container(
+              child: Expanded(
+                child: Text(
+                  //Estilizando apenas o texto do botão.
+                  'Criar uma conta'.toUpperCase(),
+                  style: TextStyle(
+                    letterSpacing: 2.5,
+                    fontWeight: FontWeight.w900,
+                    fontSize: 12,
+                    color: Colors.black38,
+                  ),
                 ),
               ),
             ),
